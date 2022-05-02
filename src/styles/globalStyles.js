@@ -23,7 +23,7 @@ import { createGlobalStyle } from 'styled-components';
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url("https://media-exp1.licdn.com/dms/image/C4E0BAQGneJ-rTqRbTA/company-logo_200_200/0/1635773460397?e=2147483647&v=beta&t=quuWQooiOl2DoGh2WOVB_ECDpwh8bSGUGr9YIfUM6eg")
+    background: white;
   }
 `;
 

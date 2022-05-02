@@ -17,12 +17,26 @@ export function Search() {
       return;
     }
     try {
+      const data = {
+        user: null,
+        repositories: null
+      }
+
       const result = await api.get(
         `https://api.github.com/users/${inputUserName}`
       );
-      console.log(result, "oi");
+      if(result.status === 200) {
+        data.user = result.data 
 
-      handleGitHubUser(result.data)
+
+        console.log(result, 'oi')
+        const repos = await api.get(
+          `https://api.github.com/users/${inputUserName}/repos`
+        )
+        data.repositories = repos.data
+      }
+
+      handleGitHubUser(data)
       history("/about")
     } catch (err) {
       alert("Not found");

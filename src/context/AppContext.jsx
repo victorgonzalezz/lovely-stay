@@ -7,6 +7,8 @@ const AppContextProvider = ({ children }) => {
 
  const handleGitHubUser = (data) => {
   setGitHubUser(data)
+  const dataToJson = JSON.stringify(data)
+  localStorage.setItem("gitHubUserData", dataToJson)
  }
 
   return (

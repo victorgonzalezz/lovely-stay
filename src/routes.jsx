@@ -9,8 +9,8 @@ const AppRoutes = () => {
   return (
     <Routes>
       
-        <Route exact path="/" element={<Search />} />
-        <Route path="/about" element={<GitHubUser />} />
+        <Route path="/" element={<Search />} />
+        <Route path="about" element={<GitHubUser />} />
    
     </Routes>
   );
