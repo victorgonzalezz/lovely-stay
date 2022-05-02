@@ -1,7 +1,7 @@
 import React, { useContext} from 'react'
 
 import { AppContext } from '../../context/AppContext';
-import {Container, Card} from './styles';
+import {Container, Card, InsideCard} from './styles';
 
 
 export function GitHubUser() {
@@ -10,12 +10,12 @@ export function GitHubUser() {
   return (
     <Container>
       <Card>
-        <div>
+        <InsideCard>
           <img src={gitHubUser?.avatar_url} alt="user avatar" />
           <span>
             {gitHubUser?.name}
           </span>
-        </div>
+        </InsideCard>
         <div>
 
         </div>
